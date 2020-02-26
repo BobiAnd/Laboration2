@@ -10,11 +10,19 @@ Begin Web Test
     Open Browser        about:blank  Chrome
 
 Go To Web Page
-    Load Page
+    Load main Page
    Verify Page Loaded
 
-Load Page
+Load main Page
     Go To               http://rental18.infotiv.net/webpage/html/gui/index.php
+Load my home Page
+   Logg in to my page
+Load About page
+    Go To               http://rental18.infotiv.net/webpage/html/gui/about.php
+Load Continue page
+    Go To               http://rental18.infotiv.net/webpage/html/gui/showCars.php
+Load registration page
+    Go To               http://rental18.infotiv.net/webpage/html/gui/userRegistration.php
 
 Verify Page Loaded
    Wait Until Page Contains        Infotiv Car Rental
@@ -29,6 +37,36 @@ Verify page contains Textfield and button
     Page Should Contain Textfield       //*[@id="name"]  //*[@id="last"]  //*[@id="phone"]
     Page Should Contain Textfield       //*[@id="emailCreate"]  //*[@id="passwordCreate"]
     Page Should Contain Button          //*[@id="createUser"]  //*[@id="continue"]
+
+Verify Cancel button goes to date saite
+    Click Button                            //*[@id="cancel"]
+    Location Should Be                      http://rental18.infotiv.net/webpage/html/gui/index.php
+
+Verify Create button tryes to create user with data
+    Input Text                         //*[@id="name"]       Bobi
+    Input Text                         //*[@id="last"]       Andreevski
+    Input Text                         //*[@id="phone"]       0769478222
+    Input Text                         //*[@id="emailCreate"]        bob.andreevski@gmail.com
+    Input Text                         //*[@id="confirmEmail"]          bob.andreevski@gmail.com
+    Input Text                         //*[@id="passwordCreate"]        ithögskolan
+    Input Text                         //*[@id="confirmPassword"]       ithögskolan
+     Click Element                     xpath://*[@id="create"]
+     Wait Until Page Contains     That E-mail is already taken
+Go to first page
+
+Go true all pages
+    Click Element               //*[@id="about"]
+    Verify Header
+
+Verify Header
+    Page Should Contain Element         xpath://*[@id="rightHeader"]
+
+
+Logg in to my page
+    Input Text          //*[@id="email"]            bob.andreevski@gmail.com
+    Input Text          //*[@id="password"]         ithögskolan
+    Click Button        //*[@id="login"]
+    Wait Until Page Contains        Logout
 End Web Test
     Close Browser
 
@@ -43,3 +81,38 @@ Testar om det finns fält för att skapa ny andvändare
     Go to Createuser
     Verify page contains Textfield and button
 
+Testar om det Canecel knappen funkar
+    [Documentation]     kravet skall Cancel knappen ta mig till välj datum sidan
+
+    [Tags]              test2
+
+    Go To Web Page
+    Go to Createuser
+    verify cancel button goes to date saite
+
+
+Testar om create knappen funkar
+    [Documentation]     kravet skall Create knappen försöka skapa en andvändare med dem värdena som fylls i
+
+    [Tags]              test3
+
+    Go To Web Page
+    Go to Createuser
+    Verify Create button tryes to create user with data
+
+
+Testar om Header finns på varje sida
+    [Documentation]     kravet skall Headernm vara synlig på alla sidor.
+
+    [Tags]              test4
+
+   Go To Web Page
+   Verify Header
+   Load my home Page
+   Verify Header
+   Load About page
+   Verify Header
+   Load Continue page
+   Verify Header
+   Load registration page
+   Verify Header

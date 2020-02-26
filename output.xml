@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200226 09:02:21.992" rpa="false">
+<suite id="s1" name="Infotiv Car Rental" source="C:\Users\boban\PycharmProjects\Labb3\Test\infotiv_car_rental.robot">
+<test id="s1-t1" name="Testar om Header finns på varje sida">
+<kw name="Begin Web Test" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200226 09:02:22.317" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200226 09:02:22.317" endtime="20200226 09:02:27.835"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:22.317" endtime="20200226 09:02:27.836"></status>
+</kw>
+<kw name="Go To Web Page">
+<kw name="Load main Page">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://rental18.infotiv.net/webpage/html/gui/index.php</arg>
+</arguments>
+<msg timestamp="20200226 09:02:27.839" level="INFO">Opening url 'http://rental18.infotiv.net/webpage/html/gui/index.php'</msg>
+<status status="PASS" starttime="20200226 09:02:27.839" endtime="20200226 09:02:28.236"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:27.838" endtime="20200226 09:02:28.236"></status>
+</kw>
+<kw name="Verify Page Loaded">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Infotiv Car Rental</arg>
+</arguments>
+<status status="PASS" starttime="20200226 09:02:28.237" endtime="20200226 09:02:28.266"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:28.237" endtime="20200226 09:02:28.267"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:27.837" endtime="20200226 09:02:28.267"></status>
+</kw>
+<kw name="Verify Header">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="rightHeader"]</arg>
+</arguments>
+<msg timestamp="20200226 09:02:28.284" level="INFO">Current page contains element 'xpath://*[@id="rightHeader"]'.</msg>
+<status status="PASS" starttime="20200226 09:02:28.267" endtime="20200226 09:02:28.284"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:28.267" endtime="20200226 09:02:28.284"></status>
+</kw>
+<kw name="Load my home Page">
+<kw name="Logg in to my page">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="email"]</arg>
+<arg>bob.andreevski@gmail.com</arg>
+</arguments>
+<msg timestamp="20200226 09:02:28.286" level="INFO">Typing text 'bob.andreevski@gmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20200226 09:02:28.286" endtime="20200226 09:02:28.487"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="password"]</arg>
+<arg>ithögskolan</arg>
+</arguments>
+<msg timestamp="20200226 09:02:28.487" level="INFO">Typing text 'ithögskolan' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20200226 09:02:28.487" endtime="20200226 09:02:28.607"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="login"]</arg>
+</arguments>
+<msg timestamp="20200226 09:02:28.607" level="INFO">Clicking button '//*[@id="login"]'.</msg>
+<status status="PASS" starttime="20200226 09:02:28.607" endtime="20200226 09:02:29.109"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Logout</arg>
+</arguments>
+<status status="PASS" starttime="20200226 09:02:29.109" endtime="20200226 09:02:29.130"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:28.285" endtime="20200226 09:02:29.130"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:28.285" endtime="20200226 09:02:29.130"></status>
+</kw>
+<kw name="Verify Header">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="rightHeader"]</arg>
+</arguments>
+<msg timestamp="20200226 09:02:29.138" level="INFO">Current page contains element 'xpath://*[@id="rightHeader"]'.</msg>
+<status status="PASS" starttime="20200226 09:02:29.130" endtime="20200226 09:02:29.139"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:29.130" endtime="20200226 09:02:29.140"></status>
+</kw>
+<kw name="Load About page">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://rental18.infotiv.net/webpage/html/gui/about.php</arg>
+</arguments>
+<msg timestamp="20200226 09:02:29.141" level="INFO">Opening url 'http://rental18.infotiv.net/webpage/html/gui/about.php'</msg>
+<status status="PASS" starttime="20200226 09:02:29.141" endtime="20200226 09:02:29.343"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:29.141" endtime="20200226 09:02:29.343"></status>
+</kw>
+<kw name="Verify Header">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="rightHeader"]</arg>
+</arguments>
+<msg timestamp="20200226 09:02:29.359" level="INFO">Current page contains element 'xpath://*[@id="rightHeader"]'.</msg>
+<status status="PASS" starttime="20200226 09:02:29.344" endtime="20200226 09:02:29.359"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:29.344" endtime="20200226 09:02:29.359"></status>
+</kw>
+<kw name="Load Continue page">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://rental18.infotiv.net/webpage/html/gui/showCars.php</arg>
+</arguments>
+<msg timestamp="20200226 09:02:29.361" level="INFO">Opening url 'http://rental18.infotiv.net/webpage/html/gui/showCars.php'</msg>
+<status status="PASS" starttime="20200226 09:02:29.360" endtime="20200226 09:02:31.872"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:29.360" endtime="20200226 09:02:31.873"></status>
+</kw>
+<kw name="Verify Header">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>xpath://*[@id="rightHeader"]</arg>
+</arguments>
+<msg timestamp="20200226 09:02:31.892" level="INFO">Current page contains element 'xpath://*[@id="rightHeader"]'.</msg>
+<status status="PASS" starttime="20200226 09:02:31.875" endtime="20200226 09:02:31.892"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:31.873" endtime="20200226 09:02:31.892"></status>
+</kw>
+<kw name="End Web Test" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200226 09:02:31.893" endtime="20200226 09:02:34.365"></status>
+</kw>
+<status status="PASS" starttime="20200226 09:02:31.893" endtime="20200226 09:02:34.366"></status>
+</kw>
+<doc>kravet skall Headernm vara synlig på alla sidor.</doc>
+<tags>
+<tag>test4</tag>
+</tags>
+<status status="PASS" starttime="20200226 09:02:22.316" endtime="20200226 09:02:34.366" critical="yes"></status>
+</test>
+<doc>Labb3</doc>
+<status status="PASS" starttime="20200226 09:02:21.994" endtime="20200226 09:02:34.369"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">test4</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Infotiv Car Rental">Infotiv Car Rental</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
