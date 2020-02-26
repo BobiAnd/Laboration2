@@ -25,7 +25,7 @@ Load registration page
     Go To               http://rental18.infotiv.net/webpage/html/gui/userRegistration.php
 
 Verify Page Loaded
-   Wait Until Page Contains        Infotiv Car Rental
+   Wait Until Page Contains        When do you want to make your trip?
 
 Go to Createuser
     Click Button                   //*[@id="createUser"]
@@ -60,6 +60,8 @@ Go true all pages
 
 Verify Header
     Page Should Contain Element         xpath://*[@id="rightHeader"]
+Press logo
+    Click Element                       xpath://*[@id="title"]
 
 
 Logg in to my page
@@ -116,3 +118,32 @@ Testar om Header finns på varje sida
    Verify Header
    Load registration page
    Verify Header
+
+Testar alla headers om man kommer tillbaka till första sidan
+    [Documentation]     kravet skall genom att klicka på Headernm komma tillbaka till första sidan.
+
+    [Tags]              test5
+
+   Go To Web Page
+   Press logo
+   Verify Page Loaded
+   Load my home Page
+   Press logo
+   Verify Page Loaded
+   Load About page
+   Press logo
+   Verify Page Loaded
+   Load Continue page
+   Press logo
+   Verify Page Loaded
+   Load registration page
+   Press logo
+   Verify Page Loaded
+
+
+
+    [Documentation]     kravet skall genom att klicka på Headernm komma tillbaka till första sidan.
+
+    [Tags]              test5
+
+   Go To Web Page
