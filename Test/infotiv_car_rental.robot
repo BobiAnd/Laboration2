@@ -2,8 +2,10 @@
 
 Documentation       Labb3
 Library         SeleniumLibrary
+Library           DateTime
 Test Setup          Begin Web Test
-Test Teardown       End Web Test
+Test Teardown    #   End Web Test
+
 
 *** Keywords ***
 Begin Web Test
@@ -62,8 +64,14 @@ Verify Header
     Page Should Contain Element         xpath://*[@id="rightHeader"]
 Press logo
     Click Element                       xpath://*[@id="title"]
+Select date
+     Set Selenium Speed  1 seconds
 
+     ${CurrentDate}    Get Current Date    result_format=%d-%m-%Y
+     log  ${CurrentDate}
+     Input Text         //*[@id="end"]    ${CurrentDate}+3 day
 
+     log  ${CurrentDate}
 Logg in to my page
     Input Text          //*[@id="email"]            bob.andreevski@gmail.com
     Input Text          //*[@id="password"]         ithögskolan
@@ -71,6 +79,8 @@ Logg in to my page
     Wait Until Page Contains        Logout
 End Web Test
     Close Browser
+
+*** Variables ***
 
 *** Test Cases ***
 
@@ -141,9 +151,11 @@ Testar alla headers om man kommer tillbaka till första sidan
    Verify Page Loaded
 
 
+Testar att boka en bil och sedan nollställa värdena
+    [Documentation]     boka bil
 
-    [Documentation]     kravet skall genom att klicka på Headernm komma tillbaka till första sidan.
-
-    [Tags]              test5
+    [Tags]              test6
 
    Go To Web Page
+   Load my home Page
+   Select date
