@@ -13,7 +13,7 @@ Test Teardown       End Web Test
 
 *** Test Cases ***
 
-Testar om det finns fält och knappar för att skapa ny andvändare.
+Testar om det finns falt och knappar for att skapa ny andvandare.......
     [Documentation]    On the create user page, the user may create a user account
   ...                  Required fields are, first and last name, phone number, email and password.
   ...                  A Cancel button and a Create button
@@ -43,7 +43,6 @@ Testar att skapa en användare med den informationen man matar in
    Given User goes To Web Page
     When User clicks on CreateUser Button
     Then User tryes to create user
-
 
 Testar om Header finns på varje sida
     [Documentation]     The header is available on every page.
@@ -148,7 +147,7 @@ Testar om vid inlogningen om andvändar namnet kommer synas
 
 Testar om man logout knappen funkar
     [Documentation]     Buttons will be changed to Logout, that wiill logout the user from the session,
-     [Tags]              Test 10 VG delen
+     [Tags]              Test 10
 
     Given User goes To Web Page
     And User loggs in to my page
