@@ -1,0 +1,42 @@
+Labb3 Robotframework Selenium
+Av Bobi Andreevski Mjuk19
+
+
+
+1) Vilka testdesigntekniker har du använt?
+
+*Jag använde mig av utforskande testning 
+samt tillståndsbaserad testning och cheklistebaserad testning, användningfallsbaserad testning
+
+
+2) Hittade du några avvikelser från kraven?
+
+*I kravet står det inget om att man måste skriva in comfirme Email och comfirme Password
+men  måste fyllas i om man vill skapa andvändare.
+
+*I Kravet står det att om man missar att fylla i nån info när man skapar användare så
+skall en alert popup ploppa up denna popup syns men pogramet känner inte av att nån alert finns
+
+*I kravet står det att om man missar fylla i nån info när man loggar in på mypage så skall en
+alert popup ploppa fram denna popup syns men pogramet känner inte av att nån alert finns
+
+*I kravet står det att när man loggar in skall en välkomst fras synas med användar namnet
+men välkomstfrasen syns inte till.
+
+*En bugg hittades när man försöker logga in och man minskar webbrowsern
+då hoppar fältet för inlogning av namn och lösenord ner om 
+man skriver i fel namn eller lösenord. samma om man miskar den ännu mer så blir fälten centrerade
+
+3) Vilka av dina testfall bedömer du gav störst vinst i att automatisera? (jämfört med att
+testa manuellt)
+
+Alla testfall funkar utmärkt att köras manuelt om man bara skall köra dem en gång men så snabbt man skall upprepa dem
+flera gånger så anser jag att man bör automatisera samtliga som går att automatisera tex att finna popuppen och bekräfta
+att den finns eller att den poppar upp kunde jag inte automatisera utan fick bekräfta det manuellt eller visuellt via en printscreen
+
+4) Vad var svårast med labben och varför?
+
+Det svåraste med labben var att hitta hur funktionerna fungerar  i selenium och robotframework bibloteken
+men efter en noga granskning och lite googlande så kan man skapa sig ett hum. men just att hitta rätt locater var också ganska svårt.
+
+
