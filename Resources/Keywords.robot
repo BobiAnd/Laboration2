@@ -6,13 +6,13 @@ Library           DateTime
 
 *** Variables ***
 
-    ${Browser} =         Chrome
-    ${Main_page Url} =   http://rental18.infotiv.net/webpage/html/gui/index.php
-    ${User_FName} =      Bobi
-    ${User_LName} =      Andreevski
-    ${User_Password} =   ithögskolan
-    ${User_Mail} =       bob.andreevski@gmail.com
-    ${User_Phone} =      0769478222
+${Browser} =         Chrome
+${Main_page Url} =   http://rental18.infotiv.net/webpage/html/gui/index.php
+${User_FName} =      Bobi
+${User_LName} =      Andreevski
+${User_Password} =   ithögskolan
+${User_Mail} =       bob.andreevski@gmail.com
+${User_Phone} =      0769478222
 
 *** Keywords ***
 Begin Web Test
@@ -225,11 +225,11 @@ User name is shown when logged in
 User clicks on logout
     Click Button                    //*[@id="logout"]
 User captures faild login messege no bug screenshot
-    Capture Page Screenshot        C:\Users\boban\PycharmProjects\Labb3\loginmsg.png
+    Capture Page Screenshot        C:\Users\boban\PycharmProjects\Labb3\Captures\loginmsg.png
 User captures faild login messege with first bug screenshot
-     Capture Page Screenshot       C:\Users\boban\PycharmProjects\Labb3\loginmsg1bug.png
+     Capture Page Screenshot      C:\Users\boban\PycharmProjects\Labb3\Captures\loginmsg1bug.png
 User captures centerd login bug screenshot
-    Capture Page Screenshot        C:\Users\boban\PycharmProjects\Labb3\loginmsg2bug.png
+    Capture Page Screenshot       C:\Users\boban\PycharmProjects\Labb3\Captures\loginmsg2bug.png
 Minimaiaz browser to show first bug
     Set Window Size   860  747
 Minimaiz browser to show second bug

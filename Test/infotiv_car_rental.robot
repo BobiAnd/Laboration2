@@ -13,7 +13,7 @@ Test Teardown       End Web Test
 
 *** Test Cases ***
 
-Testar om det finns falt och knappar for att skapa ny andvandare.......
+Testar om det finns fält och knappar för att skapa ny andvändare.
     [Documentation]    On the create user page, the user may create a user account
   ...                  Required fields are, first and last name, phone number, email and password.
   ...                  A Cancel button and a Create button
